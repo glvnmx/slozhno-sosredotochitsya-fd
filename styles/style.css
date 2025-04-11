@@ -1,5 +1,148 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color, #000028);
+  font-family: var(--font-family, monospace);
+  font-size: 18px;
+  font-weight: 400;
+  min-inline-size: 375px;
+  max-inline-size: 1024px;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition-duration: var(--transition-duration);
+}
+
+/*-- HEADER */
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 10px;
+  margin-block-end: 40px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-block-size: 668px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--heading-text, #DB00FF);
+  font-weight: 700;
+  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+}
+
+.header__subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--bg-color, #000028);
+  max-width: 100%;
+  align-self: center;
+}
+
+.title__decor {
+  background-color: var(--accent-color, #ff0070);
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color, #ff0070);
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-transform: lowercase;
+  font-size: 18px;
+  padding: 1.5px 13px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--border-bottom);
+}
+
+.header__theme-menu-button_active {
+  cursor: default;
+  border-color: currentColor;
+  pointer-events: none;
+}
+
+/*-- DECOR */
+
+.header__decor {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.text-decor {
+  background-color: var(--accent-color, #ff0070);
+  color: var(--accent-color, #ff0070);
+}
+
+.header__decor::before {
+  position: absolute;
+  content: "REC";
+  text-transform: uppercase;
+  text-align: center;
+  font-style: normal;
+  right: 15px;
+}
+
+.header__decor::after {
+  position: absolute;
+  content: "";
+  background-color: var(--accent-color, #ff0070);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
+  top: 8px;
+  right: -2px;
+  min-height: 9px;
+  min-width: 9px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-inline-end: 1px solid var(--accent-color, #ff0070);
+  border-block-start: 1px solid var(--accent-color, #ff0070);
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-inline-start: 1px solid var(--accent-color, #ff0070);
+  border-block-end: 1px solid var(--accent-color, #ff0070);
+  width: 25px;
+  height: 25px;
+  left: 10px;
+  bottom: 10px;
 }
