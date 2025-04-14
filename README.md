@@ -1,0 +1,1 @@
+git@github.com:glvnmx/slozhno-sosredotochitsya-fd.git
