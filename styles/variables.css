@@ -14,8 +14,10 @@
   --subtitle-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
   --main-text-color: #F1B2CE;
+  --opacity-color: rgba(255, 0, 112, 0.4);
   --article-title-color: var(--accent-color);
   --section-title-color: var(--subtitle-color);
   --link-shadow: var(--accent-color);
   --rec-color: var(--accent-color);
+  --links-border: var(--text-color);
 }

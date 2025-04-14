@@ -49,7 +49,7 @@
 .header__subtitle {
   font-size: 18px;
   font-weight: 700;
-  color: var(--bg-color, #000028);
+  color: var(--subtitle-color, #000028);
   max-width: 100%;
   align-self: center;
 }
@@ -69,7 +69,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--opacity-color);
 }
 
 .header__theme-menu-button:focus {
@@ -82,7 +82,7 @@
 
 .header__theme-menu-button_active {
   cursor: default;
-  border-color: currentColor;
+  border-color: var(--border-color);
   pointer-events: none;
 }
 
@@ -95,8 +95,8 @@
 }
 
 .text-decor {
-  background-color: var(--accent-color, #ff0070);
-  color: var(--accent-color, #ff0070);
+  background-color: var(--border-color, #ff0070);
+  color: var(--border-color, #ff0070);
 }
 
 .header__decor::before {
@@ -112,13 +112,13 @@
 .header__decor::after {
   position: absolute;
   content: "";
-  background-color: var(--accent-color, #ff0070);
+  background-color: var(--border-color, #ff0070);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
+  box-shadow: 0 0 4px 2px var(--border-color, #ff0070);
   top: 10px;
   right: -1px;
   min-height: 9px;
@@ -128,8 +128,8 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
-  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--border-color, #ff0070);
+  border-block-start: 1px solid var(--border-color, #ff0070);
   width: 25px;
   height: 25px;
   top: 10px;
@@ -139,8 +139,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  border-inline-start: 1px solid var(--accent-color, #ff0070);
-  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--border-color, #ff0070);
+  border-block-end: 1px solid var(--border-color, #ff0070);
   width: 25px;
   height: 25px;
   left: 10px;
@@ -164,7 +164,7 @@
 }
 
 .section__title {
-  color: var(--accent-color, #ff0070);
+  color: var(--border-color, #ff0070);
   font-size: 18px;
   line-height: 24px;
 }
@@ -183,7 +183,7 @@
 
 .section__subtitle {
   font-size: 18px;
-  color: var(--bg-color, #000028);
+  color: var(--subtitle-color, #000028);
 }
 
 .subtitle-regular {
@@ -203,7 +203,7 @@
 }
 
 .links:hover {
-  border-bottom: 1px solid #f1b2ce;
+  border-bottom: 1px solid var(--links-border);
 }
 
 .links:focus {
@@ -211,7 +211,7 @@
 }
 
 .links:focus-visible {
-  outline: 1px solid #f1b2ce;
+  outline: 1px solid var(--links-border);
 }
 
 .gallery__images {
