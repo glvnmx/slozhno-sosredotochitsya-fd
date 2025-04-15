@@ -9,7 +9,6 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --font-family: "IBM Plex Mono", monospace;
   --heading-text: #FFC2E6;
   --accent-color: #FF8DCB;
   --border-color: #353430;
@@ -24,12 +23,15 @@
   --section-title-color: var(--subtitle-color);
   --link-shadow: var(--accent-color);
   --rec-color: var(--accent-color);
+
+  .header__decor {
+    display: none;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем переменные светлой темы */
-    --font-family: "IBM Plex Mono", monospace;
     --heading-text: #FFC2E6;
     --accent-color: #FF8DCB;
     --border-color: #353430;
@@ -46,29 +48,6 @@
     --rec-color: var(--accent-color);
     --links-border: var(--text-color);
   }
-
-  .header__decor {
-    display: none;
-  }
-}
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  --font-family: "IBM Plex Mono", monospace;
-  --heading-text: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --border-color: #353430;
-  --border-bottom: #353430;
-  --text-color: #353430;
-  --bg-color: #fff1f7;
-  --subtitle-color: #353430;
-  --bg-image: url(../images/cover-image-light.png);
-  --main-text-color: #353430;
-  --opacity-color: rgba(53, 52, 48, 0.4);
-  --article-title-color: var(--accent-color);
-  --section-title-color: var(--subtitle-color);
-  --link-shadow: var(--accent-color);
-  --rec-color: var(--accent-color);
-  --links-border: var(--text-color);
 
   .header__decor {
     display: none;

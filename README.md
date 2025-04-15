@@ -1,1 +1,1 @@
-git@github.com:glvnmx/slozhno-sosredotochitsya-fd.git
+https://github.com/glvnmx/slozhno-sosredotochitsya-fd.git
